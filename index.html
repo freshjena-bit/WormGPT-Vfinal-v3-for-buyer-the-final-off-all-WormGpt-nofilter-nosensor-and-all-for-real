@@ -751,8 +751,11 @@ generateResponse(chat);
 }
 
 async function generateResponse(chat){
-const apiKey=localStorage.getItem('openrouter_api_key');
-if(!apiKey){$('apiModal').classList.add('on');return;}
+const apiKey = localStorage.getItem('openrouter_api_key') || '';
+  
+if(!apiKey){
+  toast('⚠️ API key kosong, request bisa gagal');
+}
 
 generating=true;
 updateSendBtn();
