@@ -604,7 +604,6 @@ $('landing').classList.add('h');
 $('app').classList.add('on');
 if(!chats.length)newChat();else renderMessages();
 renderList();
-if(!localStorage.getItem('openrouter_api_key'))setTimeout(()=>$('apiModal').classList.add('on'),300);
 }
 function toggleSide(){
 const s=$('sidebar'),o=$('sideOv');
